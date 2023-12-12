@@ -6,7 +6,6 @@ const connectDB = async () => {
     await mongoose.connect(process.env.DATABASE_URI, {
       connectTimeoutMS: 60000,
       socketTimeoutMS: 60000,
-      readPreference: "secondary",
     });
   } catch (err) {
     console.log(err);
